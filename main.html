@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    
+   <head>
+   	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Simple Calculator</title>
+       <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+   </head>
+
+   <body>
+   	
+   	<div class="background" id="background"></div>
+   	
+   	<div class="container">
+
+    	<div class="output-area">
+		  <a href="https://github.com/DanssUI" class="fa-brands fa-github"></a>
+       	  <h1 id="hasil">0</h2>
+       	  <h2 id="preview" style="visibility:hidden">0</h3>
+        </div>
+       		 
+        <div class="box">
+          <div class="setting">
+   			<div class="setting-form">
+   				<button id="nan" onclick="closeSetting()" style="position: absolute; top: 25px; left: 15px; color: black;">&times;</button>
+   				<h1>SETTING</h1>
+    			<h2>THEME</h2>  				
+   				<div class="setting-theme">
+   					<div><button onclick="changeTheme(0)" style="background :linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%)"></button><h4>White</h4></div>
+   					<div><button onclick="changeTheme(1)" style="background :linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(55,55,55,1) 100%)"></button><h4>Black</h4></div>
+   					<div><button onclick="changeTheme(2)" style="background :linear-gradient(60deg, rgba(153,0,255,1) 13%, rgba(0,212,255,1) 100%)"></button><h4>Blue</h4></div>
+   				</div>
+   				<h2>OPACITY</h2>
+   				<input class="slider-opacity" type="range" value="60" min="1" max="100" />
+   			</div>
+   			<span class="setting-riple"></span>
+   		  </div>
+        	
+       	  <div class="firstRow">
+       	  <button id="nan" class="setting-btn" onclick="openSetting()"></button>
+      	  <button id="nan" style="color: #FF002F;" onclick="bersihkan()">C</button>
+      	  <button id="nan" class="del-btn" onclick="backspace()"></button>
+	      <button id="nan" onclick="operator(0)">+</button>
+        </div>
+        
+        <div class="secondRow">
+          <button>7</button>
+      	  <button>8</button>
+      	  <button>9</button>
+      	  <button id="nan" onclick="operator(1)">-</button>
+        </div>
+        
+        <div class="thirdRow">
+      	  <button>4</button>
+       	  <button>5</button>
+          <button>6</button>
+          <button id="nan" onclick="operator(2)">&times;</button>
+        </div>
+		
+		<div class="fourthRow">
+          <button>1</button>
+      	  <button>2</button>
+          <button>3</button>
+       	  <button id="nan" onclick="operator(3)">&divide;</button>
+        </div>
+        
+        <div class="fivethRow">
+          <button>0</button>
+          <button>00</button>
+          <button id="nan" onclick="koma()">.</button>
+          <button id="nan" onclick="hitung()">=</button>
+        </div>
+       </div>
+       
+       <div class="history">
+       	  <h2>HISTORY</h2>
+       	  <div>
+       	  	<button id="nan" onclick="clearHistory()">Clear</button>
+		  </div>
+       </div>       
+      
+   	</div>
+  </body>
+    
+ <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    
+</html>
